@@ -11,7 +11,8 @@ const PublicRoute = ({ component: Component, isFac, isLoggedIn, location, logout
             const currentPath = location.pathname;
             if (currentPath === '/login' && isLoggedIn) {
                 // Don't let the user go to login page if theyre logged in
-                return isFac ? <Redirect to="/facilitator" /> : <Redirect to="/" />;
+                // return isFac ? <Redirect to="/facilitator" /> : <Redirect to="/" />;
+                return <Redirect to="/" />;
             } else if (currentPath === '/logout' && isLoggedIn) {
                 logout()
                 return <Redirect to="/login" />;

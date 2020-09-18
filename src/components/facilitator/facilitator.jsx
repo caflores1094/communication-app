@@ -10,7 +10,7 @@ class Facilitator extends React.Component {
     render() {
         return (
             <div id="facilitator">
-
+                <h2>Hello Facilitator</h2>
             </div>
         );
     }

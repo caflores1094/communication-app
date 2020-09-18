@@ -14,7 +14,7 @@ export const startMeeting = (ZoomMtg) => {
         const state = getState();
         const userName = state.login.session.userName;
         const meetingNumber = MEETING_NUMBER; //TODO: Get this from data API? or set it in a world?
-        const role = 0; //TODO Base on user type?
+        const role = 1; //TODO Base on user type?
         return dispatch(getZoomSignatureDetails(meetingNumber, role))
             .then(({ signature, apiKey }) => {
                 dispatch(updateInput('zoom-visibility', true));
@@ -25,7 +25,7 @@ export const startMeeting = (ZoomMtg) => {
                     role,
                     signature,
                     userEmail: `${userName}@forio.com`, //TODO: Make this an input? idk
-                    leaveUrl: 'https://forio.com',
+                    leaveUrl: window.location.href,
                     passWord: 'flores2020', // if required
                 };
 
@@ -44,7 +44,6 @@ export const startMeeting = (ZoomMtg) => {
                         });
                     },
                     error: (err) => {
-                        debugger;
                         console.error(err);
                     },
                 });

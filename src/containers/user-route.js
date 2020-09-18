@@ -14,7 +14,7 @@ const UserRoute = ({ component: Component, isFac, isLoggedIn, location, ...rest 
             if (!isLoggedIn) {
                 return <Redirect to="/login" />;
             } else if (isFac) {
-                return <Redirect to="/facilitator" />;
+                // return <Redirect to="/facilitator" />;
                 // Include options / redirects if Fac is allowed to impersonate
             } else {
                 // Include Redirects based on Sim Status (Open / Closed / etc)
