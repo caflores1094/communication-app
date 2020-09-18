@@ -22,6 +22,18 @@ html {
     min-height: 100%;
 }
 
+#zmmtg-root {
+    display: none;
+    // height: 500px;
+    // width: 800px;
+    // left: 50%;
+    // top: 50%;
+    // transform: translate(-50%, -50%);
+    &.visible {
+        display: block;
+    }
+}
+
 body, #app, #app > div, main {
     height: 100%;
 }
@@ -48,6 +60,9 @@ hr {
 }
 
 button {
+    border: 2px solid $black;
+    border-radius: 1rem;
+    padding: 0.5rem;
     cursor: pointer;
     &.unbutton {
         background: none;

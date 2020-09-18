@@ -4,3 +4,4 @@ export * from 'actions/loading-actions';
 export * from 'actions/input-actions';
 export * from 'actions/login-actions';
 export * from 'actions/facilitator-actions';
+export * from 'actions/zoom-actions';
