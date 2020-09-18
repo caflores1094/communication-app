@@ -12,6 +12,13 @@ class BaseAuthHelper {
 
     login(creds, group = null) {
         const { account, project } = endpoints;
+        console.warn({
+            account,
+            project,
+            userName: creds.username,
+            password: creds.password,
+            groupId: group,
+        });
         return this.authManager.login({
             account,
             project,

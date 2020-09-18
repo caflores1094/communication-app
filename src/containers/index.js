@@ -5,7 +5,7 @@ export { default as FacRoute } from 'containers/fac-route';
 
 
 // Common Containers
-export { default as Test } from 'containers/test-container';
+export { default as Main } from 'containers/main-container';
 export { default as Login } from 'containers/login-container';
 export { default as Logout } from 'containers/logout-container';
 export { default as Loading } from 'containers/loading-container';

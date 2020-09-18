@@ -1,0 +1,18 @@
+@import "~css/constants.scss";
+
+.input-text-wrapper {
+    label {
+        margin-right: 1rem;
+        line-height: 1.375rem;
+        font-size: 1rem;
+    }
+
+    input, textarea {
+        display: block;
+        padding: 0.525rem 0.675rem;
+    }
+
+    input:disabled, textarea:disabled {
+        opacity: 0.5;
+    }
+}

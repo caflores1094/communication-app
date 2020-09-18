@@ -3,7 +3,7 @@ const model = '';
 const { host, accountPath, projectPath, protocol, versionPath, isLocalhost } = F.service.URL();
 const isLocal = isLocalhost();
 const account = isLocal ? 'forio-dev' : accountPath;
-const project = isLocal ? '' : projectPath;
+const project = isLocal ? 'communication-app' : projectPath;
 
 const endpoints = {
     host,

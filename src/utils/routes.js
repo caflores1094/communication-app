@@ -1,5 +1,5 @@
 import {
-    Test,
+    Main,
     Login,
     Logout,
     Facilitator,
@@ -12,7 +12,7 @@ import {
 export const publicRoutes = [
     { path: '/login', component: Login },
     { path: '/logout', component: Logout },
-    { path: '/test', component: Test },
+    { path: '/main', component: Main },
 ];
 
 export const facRoutes = [
@@ -20,7 +20,7 @@ export const facRoutes = [
 ];
 
 export const userRoutes = [
-    { path: '/', component: Test },
+    { path: '/', component: Main },
 ];
 
 

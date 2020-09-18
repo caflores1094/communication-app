@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './test.scss';
+import './main-page.scss';
 
 class Test extends React.Component {
     render() {
+        const { userName } = this.props;
         return (
-            <div id="test-page">
-
+            <div id="main-page">
+                Welcome, {userName}
             </div>
         );
     }
