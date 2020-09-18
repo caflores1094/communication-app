@@ -89,8 +89,8 @@ module.exports = {
         headers: { 'Access-Control-Allow-Origin': '*' },
         disableHostCheck: true,
         proxy: {
-            '/': 'http://local.forio.com:9999'
-        }
+            '/': 'http://local.forio.com:9999',
+        },
     },
     plugins: [
         new webpack.NoEmitOnErrorsPlugin(),
