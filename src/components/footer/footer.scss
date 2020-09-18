@@ -1,0 +1,13 @@
+@import '~css/constants.scss';
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.5rem;
+    padding: 0 1rem;
+
+    .forio-logo {
+        height: 1rem;
+    }
+}
