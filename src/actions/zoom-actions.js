@@ -1,5 +1,5 @@
 import { updateInput, handleLoad } from 'actions';
-import { access } from 'utils';
+import { endpoints, access } from 'utils';
 
 export const getZoomSignatureDetails = (meetingNumber, role) => {
     return (dispatch, getState) => {
@@ -28,7 +28,7 @@ export const startMeeting = (ZoomMtg) => {
                     role,
                     signature,
                     userEmail: `${userName}@forio.com`, //TODO: Make this an input? idk
-                    leaveUrl: 'forio.com',
+                    leaveUrl: 'https://forio.com/app/forio-dev/communication-app',
                     passWord: 'flores2020', // if required
                 };
 

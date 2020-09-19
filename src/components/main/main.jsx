@@ -17,7 +17,7 @@ const Main = ({ startMeeting, userName, isFac, meetingId }) => {
             <h2>Welcome, {userName}</h2>
             {isFac ? <FacForm /> : null}
             <strong>Meeting ID: {meetingId || 'none'}</strong>
-            <button disabled={!meetingId} onClick={() => startMeeting()}>Start Meeting</button>
+            <button disabled={!meetingId} onClick={() => startMeeting()}>{isFac ? 'Start' : 'Join'} Meeting</button>
         </div>
     );
 };
