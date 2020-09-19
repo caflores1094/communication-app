@@ -8,6 +8,7 @@ const initialState = {
     settings: {
         runGroupings: [],
         simStatus: null,
+        current: {},
     },
     members: [],
     runs: {},

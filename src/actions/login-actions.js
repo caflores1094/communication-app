@@ -6,6 +6,7 @@ import {
     LOGOUT,
     setError,
     handleLoad,
+    getSettings,
 } from 'actions';
 
 const handleSessionData = (data) => ({
@@ -16,7 +17,7 @@ const handleSessionData = (data) => ({
 const handleLoggedIn = (session) => {
     return (dispatch) => {
         dispatch(handleSessionData(session));
-        // Do authorized stuff here
+        dispatch(getSettings());
     };
 };
 

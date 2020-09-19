@@ -14,3 +14,4 @@ export { default as Loading } from 'containers/loading-container';
 
 // Facilitator Containers
 export { default as Facilitator } from 'containers/facilitator-container';
+export { default as FacForm } from 'containers/fac-form-container';

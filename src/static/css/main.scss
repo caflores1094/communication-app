@@ -65,6 +65,10 @@ button {
         text-decoration: underline;
         padding: 0;
     }
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
 }
 
 .accessibility-text {

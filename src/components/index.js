@@ -10,3 +10,4 @@ export { default as Header } from 'components/header/header';
 
 // Facilitator Components
 export { default as Facilitator } from 'components/facilitator/facilitator';
+export { default as FacForm } from 'components/fac-form/fac-form';

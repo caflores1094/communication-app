@@ -1,0 +1,14 @@
+#fac-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    .input-text-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        label {
+            margin-right: 0;
+        }
+    }
+}

@@ -1,5 +1,5 @@
 import { updateInput, handleLoad } from 'actions';
-const MEETING_NUMBER = '7609270355';
+import { access } from 'utils';
 
 export const getZoomSignatureDetails = (meetingNumber, role) => {
     return (dispatch, getState) => {
@@ -13,8 +13,11 @@ export const startMeeting = (ZoomMtg) => {
     return (dispatch, getState) => {
         const state = getState();
         const userName = state.login.session.userName;
-        const meetingNumber = MEETING_NUMBER; //TODO: Get this from data API? or set it in a world?
-        const role = 1; //TODO Base on user type?
+        const meetingNumber = access(state, ['facilitator', 'settings', 'meetingId']);
+        if (!meetingNumber) {
+            return console.error('No meeting id set!');
+        }
+        const role = Number(state.login.session.isFac);
         return dispatch(getZoomSignatureDetails(meetingNumber, role))
             .then(({ signature, apiKey }) => {
                 dispatch(updateInput('zoom-visibility', true));
@@ -25,7 +28,7 @@ export const startMeeting = (ZoomMtg) => {
                     role,
                     signature,
                     userEmail: `${userName}@forio.com`, //TODO: Make this an input? idk
-                    leaveUrl: window.location.href,
+                    leaveUrl: 'forio.com',
                     passWord: 'flores2020', // if required
                 };
 
@@ -40,7 +43,7 @@ export const startMeeting = (ZoomMtg) => {
                             apiKey,
                             meetingNumber: meetConfig.meetingNumber,
                             userName: meetConfig.userName,
-                            passWord: meetConfig.passWord
+                            passWord: meetConfig.passWord,
                         });
                     },
                     error: (err) => {
